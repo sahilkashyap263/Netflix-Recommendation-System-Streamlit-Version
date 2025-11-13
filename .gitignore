@@ -1,10 +1,29 @@
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
-*.pyc
+*.so
 .Python
 venv/
 env/
-.env
-.DS_Store
+ENV/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Data
 *.csv.gz
+*.pkl
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
