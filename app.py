@@ -103,8 +103,8 @@ with st.sidebar:
         help="Filter by language"
     )
     
-    # Get recommendations button
-    get_recs = st.button("Get Recommendations 🎯", use_container_width=True)
+    # Get recommendations button - FIXED
+    get_recs = st.button("Get Recommendations 🎯", width='stretch')
 
 # Main content
 if get_recs:
@@ -142,11 +142,11 @@ if get_recs:
                         if i + j < len(df):
                             row = df.iloc[i + j]
                             with col:
-                                # Display image
+                                # Display image - FIXED
                                 if pd.notna(row.get('Image')):
-                                    st.image(row['Image'], use_container_width=True)
+                                    st.image(row['Image'], width='stretch')
                                 else:
-                                    st.image("https://via.placeholder.com/300x450?text=No+Image", use_container_width=True)
+                                    st.image("https://via.placeholder.com/300x450?text=No+Image", width='stretch')
                                 
                                 # Display title and score
                                 st.markdown(f"**{row['Title']}**")
@@ -177,4 +177,4 @@ else:
 
 # Footer
 st.markdown("---")
-st.caption("Made with ❤️ By by Sahil Kashyap, Vansh Pratap Gautam, Harsh Bakshi & Aniket Verma using Streamlit | Powered by Machine Learning")
+st.caption("Made with ❤️ by Sahil Kashyap, Vansh Pratap Gautam, Harsh Bakshi & Aniket Verma using Streamlit | Powered by Machine Learning")
